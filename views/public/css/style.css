@@ -1,0 +1,28 @@
+.background{
+    background-color: #702df5;
+}
+.mid-section{
+    height: calc(100vh - 7.2rem);
+    overflow: auto; 
+}
+.mid-section::-webkit-scrollbar{
+    display: none;
+}
+h5{
+    border-radius: 5px;
+}
+.form-control{
+    outline: 1px solid rebeccapurple;
+}
+.form-control:hover{
+    background-color: #e9deff;
+}
+.form-control:focus{
+    outline: 4px solid rgb(198, 163, 232);
+}
+.btn-primary{
+    background-color: #6e2bf3;
+}
+.btn-primary:hover{
+background-color: #410da8;
+}
