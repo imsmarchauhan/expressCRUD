@@ -1,60 +1,62 @@
 {{>header}}
-    <title>ExpressCRUD | Add</title>
+<title>Crud APP | Add</title>
 {{>navbar}}
 
 <div class="mid-section">
-    <div class="container">
-        <h5 class="background text-light text-center my-3 p-2">Add Employee Record</h5>
-        <form action="/add" method="post">
-            <div class="mb-3">
-                <input type="text" name="name" id="name" placeholder="Full Name" class="form-control" value={{data.name}}>
-                {{#if errorMessages.name}}
-                <p class="text-danger">{{errorMessages.name}}</p>
-                {{/if}}
-            </div>
-            <div class="row">
-                <div class="col-md-6 mb-3">
-                    <input type="email" name="email" id="email" placeholder="Email address" class="form-control" value={{data.email}}>
-                    {{#if errorMessages.email}}
-                    <p class="text-danger">{{errorMessages.email}}</p>
+     <div class="container">
+          <h5 class="background p-2 my-2 text-center text-light">Add Employee Record</h5>
+          <form action="/add" method="post">
+               <div class="mb-3">
+                    <input type="text" name="name" placeholder="Full Name*" class="form-control" value="{{data.name}}">
+                    {{#if errorMessage.name}}
+                    <p class="text-danger">{{errorMessage.name}}</p>
                     {{/if}}
-                </div>
-                <div class="col-md-6 mb-3">
-                    <input type="text" name="phone" id="phone" placeholder="Phone Number" class="form-control" value={{data.phone}}>
-                    {{#if errorMessages.phone}}
-                    <p class="text-danger">{{errorMessages.phone}}</p>
-                    {{/if}}
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 mb-3">
-                    <input type="text" name="designation" id="designation" placeholder="Designation" class="form-control" value={{data.designation}}>
-                    {{#if errorMessages.designation}}
-                    <p class="text-danger">{{errorMessages.designation}}</p>
-                    {{/if}}
-                </div>
-                <div class="col-md-6 mb-3">
-                    <input type="number" name="salary" id="salary" placeholder="Salary" class="form-control" value={{data.salary}}>
-                    {{#if errorMessages.salary}}
-                    <p class="text-danger">{{errorMessages.salary}}</p>
-                    {{/if}}
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 mb-3">
-                    <input type="text" name="city" id="city" placeholder="City" class="form-control" value={{data.city}}>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <input type="text" name="state" id="state" placeholder="State" class="form-control" value={{data.state}}>
-                </div>
-            </div>
-            <div class="mb-3">
-                <button type="submit" class="btn btn-primary w-100">Submit</button>
-            </div>
-        </form>
-       
-    </div>
+               </div>
+               <div class="row">
+                    <div class="col-md-6 mb-3">
+                         <input type="email" name="email" placeholder="Email Address*" class="form-control"
+                              value="{{data.email}}">
+                         {{#if errorMessage.email}}
+                         <p class="text-danger">{{errorMessage.email}}</p>
+                         {{/if}}
+                    </div>
+                    <div class="col-md-6 mb-3">
+                         <input type="text" name="phone" placeholder="Phone Number*" class="form-control"
+                              value="{{data.phone}}">
+                         {{#if errorMessage.phone}}
+                         <p class="text-danger">{{errorMessage.phone}}</p>
+                         {{/if}}
+                    </div>
+               </div>
+               <div class="row">
+                    <div class="col-md-6 mb-3">
+                         <input type="text" name="designation" placeholder="Designation*" class="form-control"
+                              value="{{data.designation}}">
+                         {{#if errorMessage.designation}}
+                         <p class="text-danger">{{errorMessage.designation}}</p>
+                         {{/if}}
+                    </div>
+                    <div class="col-md-6 mb-3">
+                         <input type="number" name="salary" placeholder="Salary*" class="form-control"
+                              value="{{data.salary}}">
+                         {{#if errorMessage.salary}}
+                         <p class="text-danger">{{errorMessage.salary}}</p>
+                         {{/if}}
+                    </div>
+               </div>
+               <div class="row">
+                    <div class="col-md-6 mb-3">
+                         <input type="text" name="city" placeholder="City Name" class="form-control">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                         <input type="text" name="state" placeholder="State Name" class="form-control">
+                    </div>
+               </div>
+               <div class="mb-3">
+                    <button type="submit" class="btn btn-primary w-100">Submit</button>
+               </div>
+          </form>
+     </div>
 </div>
+
 {{>footer}}
-    
-    
