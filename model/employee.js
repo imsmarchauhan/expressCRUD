@@ -7,11 +7,13 @@ const EmployeeSchema = new mongoose.Schema({
     },
     email:{
         type:String,
-        required: [true, "Email must required"]
+        required: [true, "Email must required"],
+        unique: true
     },
     phone:{
-        type:String,
-        required: [true, "Phone must required"]
+        type: String,
+        required: [true, "Phone must required"],
+        unique: true
     },
     designation:{
         type:String,
@@ -22,7 +24,7 @@ const EmployeeSchema = new mongoose.Schema({
         required: [true, "Salary must required"]
     },
     city:{
-        type:String,
+        type: String,
         default:""
     },
     state:{
@@ -31,6 +33,6 @@ const EmployeeSchema = new mongoose.Schema({
     }
 });
 
-const Employee = new mongoose.Model("Employee", EmployeeSchema);
+const Employee = new mongoose.model("Employee", EmployeeSchema);
 
 module.exports = Employee

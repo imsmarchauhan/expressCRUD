@@ -1,11 +1,11 @@
 {{>header}}
-    <title>ExpressCRUD | Add</title>
+    <title>ExpressCRUD | Edit</title>
 {{>navbar}}
 
 <div class="mid-section">
     <div class="container">
-        <h5 class="background text-light text-center my-3 p-2">Add Employee Record</h5>
-        <form action="/add" method="post">
+        <h5 class="background text-light text-center my-3 p-2">Update Employee Record</h5>
+        <form action="/edit/{{data._id}}" method="post">
             <div class="mb-3">
                 <input type="text" name="name" id="name" placeholder="Full Name" class="form-control" value={{data.name}}>
                 {{#if errorMessages.name}}
